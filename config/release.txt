@@ -1,0 +1,8 @@
+```ini
+# Configuration 
+
+- Username : root
+- Password : password
+- IPaddress: DHCP
+```
+> Good Luck & Have Fun !
