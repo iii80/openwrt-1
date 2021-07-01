@@ -70,7 +70,7 @@ docker run -d \
   --network macnet \
   --privileged \
   -v /home/network:/etc/config/network \
-  xtoys/openwrt:arm64
+  xtoys/openwrt
 ```
 
 ## 容器 OpenWrt 的相关设置

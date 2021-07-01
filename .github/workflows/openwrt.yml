@@ -34,14 +34,14 @@ on:
         description: 'Generate release info'
         required: true
         default: 'release.txt'
-      release:
+      upload:
         description: 'Upload to Github Release'
         required: true
         default: 'true'
       artifact:
         description: 'Upload to Github Actions'
         required: true
-        default: 'false'  
+        default: 'true'  
 
 env:
   TZ: Asia/Shanghai
