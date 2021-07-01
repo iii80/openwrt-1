@@ -68,10 +68,9 @@ docker run -d \
   --restart always \
   --name openwrt \
   --network macnet \
-  --ip 10.10.10.11 \
   --privileged \
   -v /home/network:/etc/config/network \
-  xtoys/openwrt:phicomm
+  xtoys/openwrt:arm64
 ```
 
 ## 容器 OpenWrt 的相关设置
