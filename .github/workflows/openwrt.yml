@@ -34,26 +34,23 @@ on:
         description: 'Generate release info'
         required: true
         default: 'release.txt'
-      upload:
+      release:
         description: 'Upload to Github Release'
         required: true
         default: 'true'
-      artifact:
-        description: 'Upload to Github Actions'
-        required: true
-        default: 'true'  
+
 
 env:
   TZ: Asia/Shanghai
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   UPLOAD_BIN_DIR: false
+  UPLOAD_FIRMWARE: true
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/${{ github.event.inputs.arch }}.config
   DIY_P1_SH: ${{ github.event.inputs.feeds }}
   DIY_P2_SH: ${{ github.event.inputs.mod }}
   RELEASE_INFO: config/${{ github.event.inputs.info }}
-  UPLOAD_FIRMWARE: ${{ github.event.inputs.artifact }}
   UPLOAD_RELEASE: ${{ github.event.inputs.release }}
 
 jobs:
