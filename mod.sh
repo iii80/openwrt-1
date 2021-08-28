@@ -19,6 +19,9 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 git clone https://github.com/lisaac/luci-lib-docker package/community/luci-lib-docker
 git clone https://github.com/lisaac/luci-app-dockerman package/community/luci-app-dockerman
 #
+# > Godproxy
+git clone https://github.com/project-lede/luci-app-godproxy package/community/luci-app-godproxy
+#
 # > HelloWorld (vssr)
 git clone https://github.com/jerrykuku/lua-maxminddb package/community/lua-maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr package/community/luci-app-vssr
@@ -45,7 +48,8 @@ sed -i 's/\"vpn\"/\"services\"/g' package/lean/luci-app-zerotier/luasrc/controll
 sed -i 's/\"CPU 使用率（%）\"/\"CPU负载\"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
 sed -i 's/\"Docker CE 容器\"/\"DockerCE\"/g' package/lean/luci-app-docker/po/zh-cn/docker.po
 sed -i 's/\"DDNS.to内网穿透\"/\"内网穿透\"/g' feeds/nas/luci/luci-app-ddnsto/po/zh-cn/ddnsto.po
-sed -i 's/\"DNS 广告过滤\"/\"广告过滤\"/g' package/lean/luci-app-dnsfilter/po/zh-cn/dnsfilter.zh-cn.po
+sed -i 's/\"GodProxy滤广告\"/\"广告过滤\"/g' package/lean/luci-app-godproxy/po/zh-cn/koolproxy.po
+# sed -i 's/\"DNS 广告过滤\"/\"广告过滤\"/g' package/lean/luci-app-dnsfilter/po/zh-cn/dnsfilter.zh-cn.po
 sed -i 's/\"TTYD 终端\"/\"网页终端\"/g' package/lean/luci-app-ttyd/po/zh-cn/terminal.po
 sed -i 's/\"Argon 主题设置\"/\"主题设置\"/g' package/community/luci-app-argon-config/po/zh-cn/argon-config.po
 sed -i 's/\"解锁网易云灰色歌曲\"/\"音乐解锁\"/g' package/lean/luci-app-unblockmusic/po/zh-cn/unblockmusic.po
