@@ -145,6 +145,12 @@ jobs:
         if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
         run: |
           cd openwrt/bin/targets/*/*
+          find -name "*feeds.buildinfo*" | xargs -i rm -rf {}
+          find -name "*version.buildinfo*" | xargs -i rm -rf {}
+          find -name "*sha256sums*" | xargs -i rm -rf {}
+          find -name "*manifest*" | xargs -i rm -rf {}
+          find -name "*vmlinuz*" | xargs -i rm -rf {}
+          find -name "*Image*" | xargs -i rm -rf {}
           rm -rf packages
           echo "FIRMWARE=$PWD" >> $GITHUB_ENV
           echo "::set-output name=status::success"
